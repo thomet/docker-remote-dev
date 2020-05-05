@@ -6,3 +6,15 @@ docker run --rm -it --mount type=bind,source="$(pwd)",target=/home/developer/dev
 
 It will bind the current dir into the container for development.
 
+# Pre-installed tools
+
+- docker
+- git
+- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [tmate](https://tmate.io/)
+- [lazydocker](https://github.com/jesseduffield/lazydocker)
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- vim + [Janus](https://github.com/carlhuda/janus)
+- [mycli](https://www.mycli.net/)
+
