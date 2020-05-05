@@ -1,7 +1,12 @@
 Run with
 
 ```
-docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock --mount type=bind,source="$(pwd)",target=/home/developer/dev/ thomet/docker-remote-dev:latest
+docker run \
+  --rm \
+  -it \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --mount type=bind,source="$(pwd)",target=/home/developer/dev/ \
+  thomet/docker-remote-dev:latest
 ```
 
 It will bind the current dir into the container for development.
