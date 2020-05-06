@@ -22,4 +22,4 @@ It will bind the current dir into the container for development.
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - vim + [Janus](https://github.com/carlhuda/janus)
 - [mycli](https://www.mycli.net/)
-- [fx](https://github.com/antonmedv/fx))
+- [fx](https://github.com/antonmedv/fx)
