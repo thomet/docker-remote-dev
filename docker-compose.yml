@@ -2,13 +2,14 @@ version: "3.1"
 
 services:
   shell:
+    build: .
     image: thomet/docker-remote-dev:latest
     secrets:
       - host_ssh_key
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ~/thomet-dev:/home/developer/dev
-      - ./dotfiles:/home/developer/.dotfiles
+      - ./dotfiles:/home/developer/.dotfiles:rw
 
 secrets:
   host_ssh_key:
