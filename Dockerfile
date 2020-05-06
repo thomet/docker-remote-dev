@@ -25,6 +25,9 @@ RUN chown root:docker /var/run/docker.socket
 RUN useradd -s /bin/zsh -m -G sudo developer && echo "developer:developer" | chpasswd && usermod -aG docker developer
 RUN bash -c "$(curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh)"
 
+RUN curl -L https://github.com/antonmedv/fx/releases/latest/download/fx-linux.zip > fx-linux.zip
+RUN unzip fx-linux.zip && rm fx-linux.zip && mv fx-linux /usr/local/bin/fx
+
 USER developer
 WORKDIR /home/developer
 

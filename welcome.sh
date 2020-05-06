@@ -12,4 +12,4 @@ echo -e "Commands:
  - ${GREEN}docker${NO_COLOUR}\t\t\tAccess to your docker instance.
  - ${GREEN}tmate${NO_COLOUR}\t\t\tRuns a tmux session with a reverse proxy for remote pairing.
  - ${GREEN}mycli${NO_COLOUR}\t\t\tGUI Database client.
-"
+ - ${GREEN}fx${NO_COLOUR}\t\t\tJson viewer"
