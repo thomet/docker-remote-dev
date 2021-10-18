@@ -4,6 +4,7 @@ Run with
 docker run \
   --rm \
   -it \
+  --privileged \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --mount type=bind,source="$(pwd)",target=/home/developer/dev/ \
   thomet/docker-remote-dev:latest
