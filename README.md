@@ -1,10 +1,24 @@
-Run with
+# Usage
+Build latest image with
 
 ```
+docker build
+```
+
+Then you can run the `docker-dev` from `/bin` dir to start dev env for the current directory.
+
+You could add the bin dir to the $PATH to make the command available:
+
+```
+export PATH=$PATH:/path/to/docker-remote-dev/bin
+```
+
+# Development
+
+```
+docker build
 docker compose run --rm shell
 ```
-
-It will bind the current dir into the container for development.
 
 # Pre-installed tools
 

@@ -11,6 +11,5 @@ services:
       - ${DOCKER_SSH_SOCK:-/run/host-services/ssh-auth.sock}:/var/run/ssh-auth.sock
       - ~/.gitconfig:/etc/gitconfig
       - ~/.gnupg/:/home/developer/.gnupg/
-      - ~/:/home/developer/home_dir
       - ./dotfiles:/home/developer/.dotfiles:rw
 
