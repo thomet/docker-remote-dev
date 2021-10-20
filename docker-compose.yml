@@ -4,14 +4,13 @@ services:
   shell:
     build: .
     image: thomet/docker-remote-dev:latest
-    secrets:
-      - host_ssh_key
+    environment:
+      - SSH_AUTH_SOCK=/home/developer/ssh-auth.sock
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ~/thomet-dev:/home/developer/dev
+      - ${DOCKER_SOCK:-/run/host-services/docker.proxy.sock}:/var/run/docker.sock
+      - ${DOCKER_SSH_SOCK:-/run/host-services/ssh-auth.sock}:/var/run/ssh-auth.sock
+      - ~/.gitconfig:/etc/gitconfig
+      - ~/.gnupg/:/home/developer/.gnupg/
+      - ~/:/home/developer/home_dir
       - ./dotfiles:/home/developer/.dotfiles:rw
-
-secrets:
-  host_ssh_key:
-    file: ~/.ssh/id_rsa
 
