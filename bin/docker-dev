@@ -4,4 +4,5 @@ docker run --rm -it \
   -v ${DOCKER_SOCK:-/run/host-services/docker.proxy.sock}:/var/run/docker.sock \
   -v ${DOCKER_SSH_SOCK:-/run/host-services/ssh-auth.sock}:/var/run/ssh-auth.sock \
   --mount type=bind,source="$(pwd)",target=/home/developer/dev/ \
+  -w /home/developer/dev \
   thomet/docker-remote-dev:latest
